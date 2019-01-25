@@ -8,3 +8,46 @@ html, body{
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 100%;
 }
+.wrapper{
+	background: yellow;
+	height: 100%;
+	width: 88%; /* wrapper=88% of the body*/
+	margin: auto; /*rand verteilt sich automatisch*/
+}
+.card{
+	border: 1px black dotted;
+	justify-content: center;
+	display: flex;
+	position: relative;
+	align-items: center;
+
+}
+.card img{ /*we are talking to all the pictures in the card*/
+	width: 100%; /*img grows and shrinks with the width of the card*/
+	display: block;
+}
+.card h1{
+	position: absolute;
+	background: #fff;
+	padding: 5px;
+	border: 3px #3f888f solid;
+	outline: 2px solid pink;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);/*this element give the h1 a "minus margin" so it can be perfectly centered on the x, y and z axis*/
+}
+
+@media (min-width: 1024px){
+	body{
+	 background: red;
+	}
+ 	.row{
+	display: flex;
+	}
+	.card{
+	margin: 5px;
+	}
+}
+} /*.card{
+	float: left;
+	width: 33.3333%;*/
